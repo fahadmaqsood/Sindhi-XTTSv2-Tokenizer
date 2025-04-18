@@ -7,12 +7,12 @@ from functools import cached_property
 import torch
 from num2words import num2words
 from spacy.lang.ar import Arabic
-from spacy.lang.ar import Arabic
 from spacy.lang.en import English
 from spacy.lang.es import Spanish
 from spacy.lang.hi import Hindi
 from spacy.lang.ja import Japanese
 from spacy.lang.zh import Chinese
+from spacy.lang.ur import Urdu
 from tokenizers import Tokenizer
 
 from TTS.tts.layers.xtts.zh_num2words import TextNorm as zh_num2words

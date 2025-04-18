@@ -16,7 +16,6 @@ from spacy.lang.ur import Urdu
 from tokenizers import Tokenizer
 
 from TTS.tts.layers.xtts.zh_num2words import TextNorm as zh_num2words
-from TTS.tts.utils.text.cleaners import collapse_whitespace, lowercase
 
 logger = logging.getLogger(__name__)
 
@@ -626,6 +625,15 @@ def expand_numbers_multilingual(text, lang="en"):
         text = re.sub(_ordinal_re[lang], lambda m: _expand_ordinal(m, lang), text)
         text = re.sub(_number_re, lambda m: _expand_number(m, lang), text)
     return text
+
+
+def lowercase(text):
+    return text.lower()
+
+
+def collapse_whitespace(text):
+    return re.sub(_whitespace_re, " ", text)
+
 
 def basic_cleaners(text):
     text = lowercase(text)

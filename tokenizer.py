@@ -695,8 +695,8 @@ class VoiceBpeTokenizer:
             "ja": 71,
             "hu": 224,
             "ko": 95,
-            "hi": 150,
-            "ur": 150,
+            "hi": 400,
+            "ur": 400,
             "sd": 400,
 
         }
